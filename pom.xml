@@ -12,7 +12,7 @@
     <artifactId>cookbook-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>cookbook-api</name>
-    <description>cookbook-api</description>
+    <description>CookBook Api with Spring</description>
     <properties>
         <java.version>11</java.version>
     </properties>
