@@ -1,5 +1,6 @@
 package br.com.letscode.cookbook.cookbookapi.model;
 
+import br.com.letscode.cookbook.cookbookapi.enums.TipoMedida;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,7 +16,8 @@ public class ReceitaIngrediente {
     @Column(name = "quantidade")
     private Integer quantidade;
     @Column(name = "tipo_medida", length = 30)
-    private String tipoMedida;
+    @Enumerated(EnumType.STRING)
+    private TipoMedida tipoMedida;
 
     @ManyToOne
     @MapsId("receitaNome")

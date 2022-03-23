@@ -26,7 +26,13 @@ public class ReceitaDto {
         this.tempoPreparo = receita.getTempoPreparo();
         this.rendimentoTipo = receita.getRendimentoTipo();
         this.rendimentoQuantidade = receita.getRendimentoQuantidade();
-        this.preparos = receita.getPreparos().stream().collect(Collectors.toMap(Preparo::getPasso, Preparo::getDescricao));
-        this.ingredientes = receita.getIngredientes().stream().map(ReceitaIngredienteDto::new).collect(Collectors.toList());
+        this.preparos = receita.getPreparos()
+                .stream()
+                .collect(
+                        Collectors.toMap(Preparo::getPasso, Preparo::getDescricao)
+                );
+        this.ingredientes = receita.getIngredientes().stream()
+                .map(ReceitaIngredienteDto::new)
+                .collect(Collectors.toList());
     }
 }
