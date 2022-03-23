@@ -22,4 +22,6 @@ public class Preparo {
     @Column(name = "descricao", length = 250)
     private String descricao;
 
+    @ManyToOne(optional = false, fetch = FetchType.EAGER)
+    private Receita receita;
 }

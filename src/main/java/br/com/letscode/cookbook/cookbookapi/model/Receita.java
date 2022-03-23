@@ -29,4 +29,9 @@ public class Receita {
     @Column(name = "rendimento_quantidade")
     private Integer rendimentoQuantidade;
 
+    @OneToMany(mappedBy = "receita", fetch = FetchType.LAZY)
+    private Set<Preparo> preparos;
+
+    @OneToMany(mappedBy = "receita", fetch = FetchType.LAZY)
+    private Set<ReceitaIngrediente> ingredientes;
 }
