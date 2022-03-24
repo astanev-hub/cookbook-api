@@ -3,6 +3,7 @@ package br.com.letscode.cookbook.cookbookapi.dto;
 import br.com.letscode.cookbook.cookbookapi.model.Preparo;
 import br.com.letscode.cookbook.cookbookapi.model.Receita;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.List;
@@ -11,14 +12,15 @@ import java.util.stream.Collectors;
 
 @Getter
 @Setter
+@NoArgsConstructor
 public class ReceitaDto {
-    private final String nome;
-    private final String categoria;
-    private final Integer tempoPreparo;
-    private final String rendimentoTipo;
-    private final Integer rendimentoQuantidade;
-    private final Map<Integer, String> preparos;
-    private final List<ReceitaIngredienteDto> ingredientes;
+    private String nome;
+    private String categoria;
+    private Integer tempoPreparo;
+    private String rendimentoTipo;
+    private Integer rendimentoQuantidade;
+    private Map<Integer, String> preparos;
+    private List<ReceitaIngredienteDto> ingredientes;
 
     public ReceitaDto(Receita receita) {
         this.nome = receita.getNome();

@@ -3,10 +3,12 @@ package br.com.letscode.cookbook.cookbookapi.dto;
 import br.com.letscode.cookbook.cookbookapi.enums.TipoMedida;
 import br.com.letscode.cookbook.cookbookapi.model.ReceitaIngrediente;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
 @Setter
+@NoArgsConstructor
 public class ReceitaIngredienteDto {
     private String ingredienteNome;
     private Integer quantidade;
