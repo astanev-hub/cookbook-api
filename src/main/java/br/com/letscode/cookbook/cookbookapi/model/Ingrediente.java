@@ -13,7 +13,6 @@ import javax.persistence.Table;
 @Table(name = "ingrediente", schema = "cookbook")
 @Getter
 @Setter
-@EqualsAndHashCode()
 public class Ingrediente {
     @Id
     @Column(name = "nome", length = 120)
